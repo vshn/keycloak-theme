@@ -29,11 +29,13 @@ jobs:
           ignorePreReleases: "${{ !contains(github.ref, '-rc') }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set version from tag
+        run: echo VERSION=$(echo ${GITHUB_REF#refs/tags/}) >> $GITHUB_ENV
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: quay.io/vshn/keycloak-theme:${{ github.ref }}
+          tags: quay.io/vshn/keycloak-theme:${{ env.VERSION }}
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
