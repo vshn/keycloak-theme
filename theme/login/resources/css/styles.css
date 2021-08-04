@@ -1,0 +1,54 @@
+#kc-header {
+    display: none;
+}
+
+.parsley-errors-list.filled {
+    display: block;
+}
+
+.card-header {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.be-login {
+    visibility: hidden;
+}
+
+.vshn-logo {
+    position: relative;
+    width: 200px;
+    margin: 1em auto;
+    pointer-events: none;
+}
+
+.alert-error {
+    background-color: #ea3f30;
+}
+
+#kc-content {
+    padding: 8px 20px 20px;
+    border-radius: 0 0 3px 3px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.pf-c-alert__icon {
+    width: 55px;
+    font-size: 1.846rem;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 22px;
+    display: table-cell;
+    cursor: default;
+    padding-top: 1px;
+}
+
+.social-providers h4{
+    text-align: center;
+}
+
+.social-providers ul {
+    padding: 0;
+}
