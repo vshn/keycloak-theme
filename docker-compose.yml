@@ -8,6 +8,7 @@ services:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
       KEYCLOAK_DEFAULT_THEME: vshn
+      KEYCLOAK_WELCOME_THEME: vshn
     volumes:
       - ./theme:/opt/jboss/keycloak/themes/vshn:ro
       - ./disable-theme-cache.cli:/opt/jboss/startup-scripts/disable-theme-cache.cli:ro
