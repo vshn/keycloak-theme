@@ -28,8 +28,10 @@ window.onload = function () {
     const beLogin = document.querySelector('.be-login');
     if (beLogin) {
         beLogin.style.visibility = 'visible';
-        if(email){
-            email.select();
+        const input = document.querySelector('input');
+        if(input){
+            input.focus();
+  	    input.select();
         }
     }
 
