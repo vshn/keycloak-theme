@@ -69,3 +69,15 @@
 .form-horizontal {
     padding-bottom: 15px;
 }
+
+.list-group-item-action {
+    cursor: pointer;
+}
+
+.list-group-item .icon {
+    font-size: 1.5rem;
+}
+
+.bold-text {
+    font-weight: bold;
+}
