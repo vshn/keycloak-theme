@@ -23,3 +23,4 @@ This can be changed in the Admin Console by clicking on Realm Settings and then 
       - name: theme-provider
         image: quay.io/vshn/keycloak-theme:v1.x.x
     ```
+1. If you plan to use a redirect for the welcom page, then ensure you set `REDIRECT_URL` as environment variable
