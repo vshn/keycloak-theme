@@ -1,5 +1,13 @@
 [
   {
+    "id": "personal-info",
+    "path": "personal-info",
+    "label": "personalInfoHtmlTitle",
+    "descriptionLabel": "personalInfoIntroMessage",
+    "modulePath": "/content/account-page/AccountPage.js",
+    "componentName": "AccountPage"
+  },
+  {
     "id": "signingin",
     "path": "security/signingin",
     "label": "signingIn",
