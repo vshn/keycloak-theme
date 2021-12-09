@@ -3,9 +3,9 @@ VSHN Keycloak IDP Theme
 
 ## Local Development
 
-Run `docker compose up` to start a local keycloak with the vshn theme.
+Run `docker compose up` to start a local Keycloak with the VSHN theme.
 
-The vshn theme is not automatically selected for the account application.
+The VSHN theme is not automatically selected for the account application.
 This can be changed in the Admin Console by clicking on Realm Settings and then Theme.
 
 ## Deploy to Your Instance
@@ -23,4 +23,4 @@ This can be changed in the Admin Console by clicking on Realm Settings and then 
       - name: theme-provider
         image: quay.io/vshn/keycloak-theme:v1.x.x
     ```
-1. If you plan to use a redirect for the welcom page, then ensure you set `REDIRECT_URL` as environment variable
+1. If you plan to use a redirect for the welcome page, then ensure you set `REDIRECT_URL` as environment variable
