@@ -13,7 +13,7 @@ This can be changed in the Admin Console by clicking on Realm Settings and then 
 1. Merge your Pull Request to master branch
 1. Tag it with
     ```bash
-    git tag -am v1.x.y
+    git tag -am v1.x.y v1.x.y
     git push --tags
     ```
 1. This will trigger the GitHub Action and pushes the image to https://quay.io/repository/vshn/keycloak-theme?tab=tags
