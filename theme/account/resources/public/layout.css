@@ -261,11 +261,3 @@
             url("../fonts/Montserrat-Black.woff2") format("woff2"),
             url("../fonts/Montserrat-Black.woff") format("woff");
 }
-
-#basic-authentication-categ-title {
-    display: none;
-}
-
-#basic-authentication-categ-title + .pf-c-data-list{
-    display: none;
-}
