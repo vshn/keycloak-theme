@@ -1,14 +1,18 @@
 version: '3.8'
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:15.0.2
+    image: quay.io/keycloak/keycloak:21.0
     ports:
       - "8080:8080"
     environment:
-      KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: admin
-      KEYCLOAK_DEFAULT_THEME: vshn
-      KEYCLOAK_WELCOME_THEME: vshn
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command:
+      - start-dev
+      - --debug
+      - --spi-theme-static-max-age=-1
+      - --spi-theme-cache-themes=false
+      - --spi-theme-cache-templates=false
+      - --spi-theme-login-theme=vshn
     volumes:
-      - ./theme:/opt/jboss/keycloak/themes/vshn:ro
-      - ./disable-theme-cache.cli:/opt/jboss/startup-scripts/disable-theme-cache.cli:ro
+      - ./theme:/opt/keycloak/themes/vshn:ro

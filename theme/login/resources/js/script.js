@@ -29,11 +29,13 @@ window.onload = function () {
     if (beLogin) {
         beLogin.style.visibility = 'visible';
         const input = document.querySelector('input');
-        if(input){
+        if (input) {
             input.focus();
-  	    input.select();
+            input.select();
         }
     }
+
+    replaceLinkWithHref(document.querySelector('#kc-social-providers h4'));
 
     setTimeout(lookAround, 10000);
 }
@@ -137,3 +139,9 @@ function lookAround() {
 function reset() {
     TweenMax.to('.vshnEye', 1, {x: 0, y: 0, scaleY: 1, scaleX: 1, ease: Expo.easeOut})
 }
+function replaceLinkWithHref(element) {
+    const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;
+    const text = element.innerText;
+    element.innerHTML = text.replace(urlRegex, '<a href="$&">$&</a>');
+}
+

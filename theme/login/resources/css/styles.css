@@ -45,7 +45,7 @@
     padding-top: 1px;
 }
 
-.social-providers h4{
+.social-providers h4 {
     text-align: center;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .splash-container {
-    max-width: 500px;
+    max-width: 700px;
 }
 
 #kc-totp-settings {
@@ -103,4 +103,97 @@
 .kcLoginOTPListItemIconBodyClass {
     font-size: 1.3rem;
     padding-right: 0.25rem;
+}
+
+#kc-page-title {
+    padding: 0 1rem;
+    font-size: 2rem;
+}
+
+#kc-content-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#kc-form {
+    width: calc(50% - 1.5rem);
+}
+
+#kc-social-providers {
+    border-left: 2px solid #666666;
+    padding-left: 3rem;
+    margin-left: 3rem;
+    width: calc(50% + 1.5rem);
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#kc-social-providers::before {
+    content: 'or';
+    position: absolute;
+    left: -0.625rem;
+    top: calc(50% - 0.625rem);
+    font-size: 1.25rem;
+    background-color: white;
+    color: #666666;
+}
+
+#kc-social-providers hr {
+    display: none;
+}
+
+#kc-social-providers h4 {
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: #666666;
+    text-align: left;
+    width: 100%;
+}
+
+.social-account-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+@media all and (max-width: 700px) {
+    .splash-container {
+        max-width: 500px;
+    }
+
+    #kc-content-wrapper {
+        flex-direction: column;
+    }
+
+    #kc-form {
+        width: 100%;
+    }
+
+    #kc-social-providers {
+        border: none;
+        border-top: 2px solid #666666;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        padding-top: 2rem;
+        margin-top: 1.3rem;
+        flex-direction: column-reverse;
+        display: flex;
+        align-items: center;
+    }
+
+    #kc-social-providers::before {
+        content: 'or';
+        position: absolute;
+        left: calc(50% - 1rem);
+        top: -1rem;
+        padding: 0 0.5rem;
+        font-size: 1.25rem;
+        background-color: white;
+        color: #666666;
+    }
 }
