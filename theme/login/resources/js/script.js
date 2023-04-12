@@ -29,11 +29,13 @@ window.onload = function () {
     if (beLogin) {
         beLogin.style.visibility = 'visible';
         const input = document.querySelector('input');
-        if(input){
+        if (input) {
             input.focus();
-  	    input.select();
+            input.select();
         }
     }
+
+    document.querySelector('#kc-social-providers h4').innerHTML = `For initial login, please use the social login of your choice. Doing so, will automatically create a user account at VSHN. For more details see <a href="https://kb.vshn.net/social-login">https://kb.vshn.net/social-login</a>.`;
 
     setTimeout(lookAround, 10000);
 }
