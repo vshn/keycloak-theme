@@ -140,6 +140,7 @@ function reset() {
     TweenMax.to('.vshnEye', 1, {x: 0, y: 0, scaleY: 1, scaleX: 1, ease: Expo.easeOut})
 }
 function replaceLinkWithHref(element) {
+    // TODO Exclude interpunctuation at the end of a URL.
     const urlRegex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/g;
     const text = element.innerText;
     element.innerHTML = text.replace(urlRegex, '<a href="$&">$&</a>');
