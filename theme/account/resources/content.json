@@ -13,5 +13,12 @@
     "label": "signingIn",
     "modulePath": "/content/signingin-page/SigningInPage.js",
     "componentName": "SigningInPage"
+  },
+  {
+    "id": "linked-accounts",
+    "path": "security/linked-accounts",
+    "label": "linkedAccountsSidebarTitle",
+    "modulePath": "/content/linked-accounts-page/LinkedAccountsPage.js",
+    "componentName": "LinkedAccountsPage"
   }
 ]
