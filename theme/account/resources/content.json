@@ -15,6 +15,13 @@
     "componentName": "SigningInPage"
   },
   {
+    "id": "device-activity",
+    "path": "security/device-activity",
+    "label": "deviceActivitySidebarTitle",
+    "modulePath": "/content/device-activity-page/DeviceActivityPage.js",
+    "componentName": "DeviceActivityPage"
+  },
+  {
     "id": "linked-accounts",
     "path": "security/linked-accounts",
     "label": "linkedAccountsSidebarTitle",
