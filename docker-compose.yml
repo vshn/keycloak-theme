@@ -13,6 +13,5 @@ services:
       - --spi-theme-static-max-age=-1
       - --spi-theme-cache-themes=false
       - --spi-theme-cache-templates=false
-      - --spi-theme-login-theme=vshn
     volumes:
       - ./theme:/opt/keycloak/themes/vshn:ro
