@@ -157,6 +157,11 @@
     flex-direction: column;
     gap: 1rem;
     width: 100%;
+    list-style-type: none;
+}
+
+.social-account-list a{
+    width: 100%;
 }
 
 #social-google {
