@@ -15,6 +15,30 @@
     visibility: hidden;
 }
 
+.display-flex {
+    display: flex;
+}
+
+.pf-c-button {
+    background-color: white;
+    border-radius: 0 3px 3px 0;
+}
+
+.pf-c-button:focus {
+    outline: none;
+}
+
+.pf-m-control {
+    width: 5rem;
+    border: #bdc0c7 1px solid;
+    border-left: none;
+    background-color: white;
+}
+
+#password {
+    border-radius: 3px 0 0 3px;
+}
+
 .vshn-logo {
     position: relative;
     width: 200px;
