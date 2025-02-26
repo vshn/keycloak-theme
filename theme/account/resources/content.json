@@ -1,31 +1,21 @@
 [
   {
-    "id": "personal-info",
-    "path": "personal-info",
-    "label": "personalInfoHtmlTitle",
-    "descriptionLabel": "personalInfoIntroMessage",
-    "modulePath": "/content/account-page/AccountPage.js",
-    "componentName": "AccountPage"
+    "label": "personalInfo",
+    "path": ""
   },
   {
-    "id": "signingin",
-    "path": "security/signingin",
+    "path": "account-security/signing-in",
     "label": "signingIn",
-    "modulePath": "/content/signingin-page/SigningInPage.js",
-    "componentName": "SigningInPage"
+    "modulePath": "/content/signingin-page"
   },
   {
-    "id": "device-activity",
-    "path": "security/device-activity",
+    "path": "account-security/device-activity",
     "label": "deviceActivitySidebarTitle",
-    "modulePath": "/content/device-activity-page/DeviceActivityPage.js",
-    "componentName": "DeviceActivityPage"
+    "modulePath": "/content/device-activity-page"
   },
   {
-    "id": "linked-accounts",
-    "path": "security/linked-accounts",
+    "path": "account-security/linked-accounts",
     "label": "linkedAccountsSidebarTitle",
-    "modulePath": "/content/linked-accounts-page/LinkedAccountsPage.js",
-    "componentName": "LinkedAccountsPage"
+    "modulePath": "/content/linked-accounts-page"
   }
 ]
