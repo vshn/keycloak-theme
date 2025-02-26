@@ -5,17 +5,14 @@
   },
   {
     "path": "account-security/signing-in",
-    "label": "signingIn",
-    "modulePath": "/content/signingin-page"
+    "label": "signingIn"
   },
   {
     "path": "account-security/device-activity",
-    "label": "deviceActivitySidebarTitle",
-    "modulePath": "/content/device-activity-page"
+    "label": "deviceActivitySidebarTitle"
   },
   {
     "path": "account-security/linked-accounts",
-    "label": "linkedAccountsSidebarTitle",
-    "modulePath": "/content/linked-accounts-page"
+    "label": "linkedAccountsSidebarTitle"
   }
 ]
