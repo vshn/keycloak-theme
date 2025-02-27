@@ -3,15 +3,20 @@ VSHN Keycloak IDP Theme
 
 ## Local Development
 
-1. Run `docker compose up` to start a local Keycloak with the VSHN theme.
-2. Open Keycloak in your browser at http://localhost:8080/
-3. Log in with the user configured in docker-compose.yml
-4. Go to Realm Settings and then Themes
-5. Select the `vshn` theme for login, account, and email
-6. To check the account theme, go the account settings of the current user
+`docker compose up` to start a local Keycloak with the VSHN theme.
+
+### Configure the Themes
+
+By default, the themes are already set in the `keycloak/master.json` file.
+This is the realm configuration file that is imported at startup.
+
+If you want to change the theme, you can do so in the admin console, under Realm Settings -> Themes.
 
 If the theme is not available in the dropdown, it usually means that it is not valid.
 (Except for the admin console, currently no custom theme is available)
+
+You can export the realm via the admin console.
+This export does not include secrets, but since we only have one admin user, it is not a problem.
 
 ## Deploy to Your Instance
 
