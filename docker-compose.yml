@@ -10,4 +10,4 @@ services:
     volumes:
       - ./theme:/opt/keycloak/themes/vshn:ro
       - ./keycloak/master.json:/opt/keycloak/data/import/master.json:ro
-      - ./entrypoint.sh:/opt/entrypoint.sh
+      - ./entrypoint.sh:/opt/entrypoint.sh:ro
