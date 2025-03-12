@@ -1,17 +1,13 @@
-version: '3.8'
 services:
   keycloak:
-    image: quay.io/keycloak/keycloak:24.0.2
+    image: quay.io/keycloak/keycloak:25.0.6
     ports:
       - "8080:8080"
     environment:
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
-    command:
-      - start-dev
-      - --debug
-      - --spi-theme-static-max-age=-1
-      - --spi-theme-cache-themes=false
-      - --spi-theme-cache-templates=false
+    entrypoint: /opt/entrypoint.sh
     volumes:
       - ./theme:/opt/keycloak/themes/vshn:ro
+      - ./keycloak/master.json:/opt/keycloak/data/import/master.json:ro
+      - ./entrypoint.sh:/opt/entrypoint.sh:ro
