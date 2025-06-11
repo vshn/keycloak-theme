@@ -176,12 +176,17 @@
     font-size: 2rem;
 }
 
-#kc-content-wrapper {
+body[data-page-id="login-login"] #kc-content-wrapper {
     display: grid;
     grid-template-columns: 1fr  1fr;
     grid-template-areas:
         "login-form  social-providers"
         "info  social-providers";
+}
+
+body[data-page-id="login-register"] #kc-content-wrapper {
+    max-width: 40rem;
+    margin: auto;
 }
 
 #kc-form {
@@ -232,14 +237,37 @@
 }
 
 #footer {
-  padding-bottom: 2rem;
-  padding-left: 3.75rem;
-  padding-right: 3.75rem;
-  text-align: center;
-  color: #9CA3AF;
+    padding-bottom: 2rem;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    text-align: center;
+    color: #9CA3AF;
 }
 
 #footer a {
-  color: #9CA3AF;
-  text-decoration: underline;
+    color: #9CA3AF;
+    text-decoration: underline;
+}
+
+header.banner .subtitle {
+    display: none;
+}
+header.banner .col-md-10 {
+    max-width: 100%;
+}
+
+#kc-register-form .form-group:last-of-type {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#kc-register-form .form-group:last-of-type #kc-form-buttons {
+    order: 1;
+}
+
+#kc-register-form .form-group:last-of-type #kc-form-options {
+    order: 2;
+    max-width: fit-content;
+    align-self: center;
 }
