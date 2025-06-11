@@ -2,6 +2,11 @@
     display: none;
 }
 
+#kc-header .logo-wrapper {
+  display: flex;
+  gap: 3rem;
+}
+
 .parsley-errors-list.filled {
     display: block;
 }
@@ -11,22 +16,52 @@
     margin-right: 0;
 }
 
-.be-login {
-    visibility: hidden;
+.banner {
+    background-color: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    padding-bottom: 1.5rem !important;
 }
+
+.logo-wrapper {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 3rem;
+    width: 100%;
+}
+
+#vshn-logo {
+    background-image: url(../img/vshn.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2.6rem;
+    width: 11rem;
+    margin-bottom: 0.4rem;
+}
+
+#servala-logo {
+  background-image: url(../img/servala.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2.8rem;
+  width: 12.432rem;
+}
+
+#appuio-logo {
+  background-image: url(../img/appuio.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 3rem;
+  width: 6.735rem;
+}
+
 
 .display-flex {
     display: flex;
 }
 
-.pf-c-button {
-    background-color: white;
-    border-radius: 0 3px 3px 0;
-}
-
-.pf-c-button:focus {
-    outline: none;
-}
 
 .pf-m-control {
     width: 5rem;
@@ -78,7 +113,7 @@
 }
 
 .splash-container {
-    max-width: 500px;
+    max-width: 950px;
 }
 
 #kc-totp-settings {
@@ -129,50 +164,58 @@
     padding-right: 0.25rem;
 }
 
+.remember-me-forgot-pw-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
 #kc-page-title {
     padding: 0 1rem;
     font-size: 2rem;
 }
 
 #kc-content-wrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    grid-template-areas:
+        "login-form  social-providers"
+        "info  social-providers";
 }
 
+#kc-form {
+    grid-area: login-form;
+    padding: 3.75rem 3.75rem 0 3.75rem;
+}
+
+#kc-info {
+    grid-area: info;
+    padding: 0 3.75rem 3.75rem 3.75rem;
+}
+
+#kc-registration a {
+  text-decoration: underline;
+}
 
 #kc-social-providers {
-    border: none;
-    border-top: 2px solid #666666;
-    width: 100%;
-    padding: 2rem 0 0;
-    margin: 1.3rem 0 0;
-    flex-direction: column-reverse;
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-#kc-social-providers::before {
-    content: 'or';
-    position: absolute;
-    left: calc(50% - 1rem);
-    top: -1rem;
-    padding: 0 0.5rem;
-    font-size: 1.25rem;
-    background-color: white;
-    color: #666666;
+    grid-area: social-providers;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);;
 }
 
 #kc-social-providers hr {
     display: none;
 }
 
-#kc-social-providers h4 {
-    font-weight: 400;
-    font-size: 1.25rem;
+#kc-social-providers h2 {
+    text-align: center;
+    font-size: 1rem;
     color: #666666;
-    text-align: left;
-    width: 100%;
+    font-weight: 400;
 }
 
 .social-account-list {
@@ -188,20 +231,15 @@
     width: 100%;
 }
 
-#social-google {
-    background-color: #DB4437;
-    border-color: #DB4437;
-    color: white;
+#footer {
+  padding-bottom: 2rem;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  text-align: center;
+  color: #9CA3AF;
 }
 
-#social-github {
-    background-color: #24292E;
-    border-color: #24292E;
-    color: white;
-}
-
-#social-microsoft {
-    background-color: #0078D7;
-    border-color: #0078D7;
-    color: white;
+#footer a {
+  color: #9CA3AF;
+  text-decoration: underline;
 }
