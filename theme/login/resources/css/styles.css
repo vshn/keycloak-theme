@@ -1,10 +1,9 @@
-#kc-header {
+#kc-header-wrapper {
     display: none;
 }
 
 #kc-header .logo-wrapper {
-  display: flex;
-  gap: 3rem;
+   margin-bottom: 1.5rem;
 }
 
 .parsley-errors-list.filled {
@@ -14,6 +13,7 @@
 .card-header {
     margin-left: 0;
     margin-right: 0;
+    padding-top: 1.5rem !important;
 }
 
 .banner {
@@ -164,7 +164,7 @@
     padding-right: 0.25rem;
 }
 
-.remember-me-forgot-pw-group {
+body[data-page-id="login-login"] .form-settings {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -178,24 +178,27 @@
 
 body[data-page-id="login-login"] #kc-content-wrapper {
     display: grid;
-    grid-template-columns: 1fr  1fr;
-    grid-template-areas:
-        "login-form  social-providers"
-        "info  social-providers";
+    grid-auto-columns: 1fr 1fr;
 }
 
-body[data-page-id="login-register"] #kc-content-wrapper {
+body[data-page-id="login-register"] #kc-content-wrapper,
+body[data-page-id="login-login-reset-password"] #kc-content-wrapper,
+body[data-page-id="login-login-config-totp"] #kc-content-wrapper,
+body[data-page-id="login-login-otp"] #kc-content-wrapper,
+body[data-page-id="login-login-update-password"] #kc-content-wrapper {
     max-width: 40rem;
     margin: auto;
 }
 
-#kc-form {
-    grid-area: login-form;
+body[data-page-id="login-login"] #kc-form {
+    grid-row:  2 / span 1;
+    grid-column: 1 / span 1;
     padding: 3.75rem 3.75rem 0 3.75rem;
 }
 
-#kc-info {
-    grid-area: info;
+body[data-page-id="login-login"] #kc-info {
+    grid-row:  3 / span 1;
+    grid-column: 1 / span 1;
     padding: 0 3.75rem 3.75rem 3.75rem;
 }
 
@@ -203,13 +206,18 @@ body[data-page-id="login-register"] #kc-content-wrapper {
   text-decoration: underline;
 }
 
-#kc-social-providers {
-    grid-area: social-providers;
+body[data-page-id="login-login"] #kc-social-providers {
+    grid-row:  2 / span 2;
+    grid-column: 2 / span 1;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding-left: 3.75rem;
     padding-right: 3.75rem;
     border-left: 1px solid rgba(0, 0, 0, 0.1);;
+}
+
+body[data-page-id="login-login"] #kc-content-wrapper .alert {
+    grid-column: 1 / span 2;
 }
 
 #kc-social-providers hr {
@@ -249,6 +257,18 @@ body[data-page-id="login-register"] #kc-content-wrapper {
     text-decoration: underline;
 }
 
+#footer .tos-login,
+#footer .tos-register {
+    display: none;
+}
+
+body[data-page-id="login-login"] #footer .tos-login {
+    display: block;
+}
+body[data-page-id="login-register"] #footer .tos-register {
+    display: block;
+}
+
 header.banner .subtitle {
     display: none;
 }
@@ -256,18 +276,86 @@ header.banner .col-md-10 {
     max-width: 100%;
 }
 
-#kc-register-form .form-group:last-of-type {
+#kc-register-form .form-group:last-of-type,
+#kc-reset-password-form .form-group:last-of-type {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-#kc-register-form .form-group:last-of-type #kc-form-buttons {
+#kc-register-form .form-group:last-of-type #kc-form-buttons,
+#kc-reset-password-form .form-group:last-of-type #kc-form-buttons {
     order: 1;
 }
 
-#kc-register-form .form-group:last-of-type #kc-form-options {
+#kc-register-form .form-group:last-of-type #kc-form-options,
+#kc-reset-password-form .form-group:last-of-type #kc-form-options  {
     order: 2;
     max-width: fit-content;
     align-self: center;
+}
+
+ol#kc-totp-settings {
+    counter-reset: otp-steps-counter;
+    list-style: none;
+    padding-left: 3.5rem;
+    margin-bottom: 0;
+}
+
+ol#kc-totp-settings>li {
+    counter-increment: otp-steps-counter;
+    margin-bottom: 2.5rem;
+    padding-left: 2.5rem;
+    position: relative;
+    border-left: 1px solid #d5d8de;
+}
+
+ol#kc-totp-settings>li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+ol#kc-totp-settings>li:before {
+    content: counter(otp-steps-counter);
+    background-color: #4081CB;
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    --size: 2rem;
+    left: calc(-1 * var(--size) /2 );
+    line-height: var(--size);
+    width: var(--size);
+    height: var(--size);
+    top: -2px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+ul#kc-totp-supported-apps li {
+    padding-left: 0.75rem;
+    padding-bottom: 0.5rem;
+}
+
+#kc-totp-settings-form {
+    margin-left: 3.5rem;
+    padding-left: 2.5rem;
+    max-width: 40rem;
+    border-left: 1px solid #d5d8de;
+}
+
+body[data-page-id="login-login-verify-email"] #kc-content-wrapper .alert {
+    background-color: transparent;
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+}
+
+body[data-page-id="login-login-verify-email"] #kc-content-wrapper .alert .message {
+    color: #8A2D0C;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+body[data-page-id="login-login-verify-email"] #kc-content-wrapper .alert .mdi-alert-circle-o:before {
+    content: url(../img/email-icon.svg);
 }
