@@ -3,7 +3,7 @@
 }
 
 #kc-header .logo-wrapper {
-   margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .parsley-errors-list.filled {
@@ -42,19 +42,19 @@
 }
 
 #servala-logo {
-  background-image: url(../img/servala.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 2.8rem;
-  width: 12.432rem;
+    background-image: url(../img/servala.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 2.8rem;
+    width: 12.432rem;
 }
 
 #appuio-logo {
-  background-image: url(../img/appuio.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 3rem;
-  width: 6.735rem;
+    background-image: url(../img/appuio.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 3rem;
+    width: 6.735rem;
 }
 
 
@@ -165,10 +165,10 @@
 }
 
 body[data-page-id="login-login"] .form-settings {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-between;
 }
 
 #kc-page-title {
@@ -203,7 +203,7 @@ body[data-page-id="login-login"] #kc-info {
 }
 
 #kc-registration a {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 body[data-page-id="login-login"] #kc-social-providers {
@@ -262,9 +262,7 @@ body[data-page-id="login-login"] #kc-content-wrapper .alert {
     display: none;
 }
 
-body[data-page-id="login-login"] #footer .tos-login {
-    display: block;
-}
+body[data-page-id="login-login"] #footer .tos-login,
 body[data-page-id="login-register"] #footer .tos-register {
     display: block;
 }
