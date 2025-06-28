@@ -12,7 +12,7 @@ services:
       - ./keycloak/master.json:/opt/keycloak/data/import/master.json:ro
       - ./entrypoint.sh:/opt/entrypoint.sh:ro
   mailpit:
-    image: axllent/mailpit:v1.26
+    image: axllent/mailpit:v1.27
     container_name: mailpit
     restart: unless-stopped
     ports:
