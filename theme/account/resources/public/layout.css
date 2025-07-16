@@ -214,14 +214,6 @@
 }
 
 
-.brand {
-    height: 35px;
-}
-
-.delete-button {
-    width: 150px;
-    height: 50px;
-}
 
 .pf-v5-c-menu-toggle {
     --pf-v5-c-menu-toggle--after--BorderBottomWidth: 0;
@@ -234,12 +226,26 @@
     --pf-v5-c-menu-toggle--before--BorderRightWidth: 0;
 }
 
-@media (max-width: 320px) {
-    .delete-button {
-        width: 120px;
-        height: 50px;
+@media (max-width: 768px) {
+  div[data-testrole="created-at"].pf-v5-c-data-list__cell {
+    order: unset;
+    padding-block-end: 0.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+    [data-page-id="account"] header.pf-v5-c-masthead {
+      display: flex;
+      flex-wrap: wrap;
     }
 
+    [data-page-id="account"] header .pf-v5-c-toolbar__content-section {
+      justify-content: flex-end;
+    }
+
+    [data-page-id="account"] header  .pf-v5-c-toolbar__item.pf-m-align-right {
+      margin-inline-start: unset;
+    }
 }
 
 @font-face {
