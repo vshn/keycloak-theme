@@ -25,10 +25,11 @@
 .logo-wrapper {
     margin-top: 1.5rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    height: 3rem;
+    column-gap: 3rem;
+    row-gap: 1rem;
     width: 100%;
 }
 
@@ -116,6 +117,13 @@
     max-width: 950px;
 }
 
+@media (max-width: 850px) {
+    .splash-container {
+        margin: 0;
+        padding: 0;
+    }
+}
+
 #kc-totp-settings {
     padding-left: 20px;
 }
@@ -177,8 +185,8 @@ body[data-page-id="login-login"] .form-settings {
 }
 
 body[data-page-id="login-login"] #kc-content-wrapper {
-    display: grid;
-    grid-auto-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
 }
 
 body[data-page-id="login-register"] #kc-content-wrapper,
@@ -191,15 +199,13 @@ body[data-page-id="login-login-update-password"] #kc-content-wrapper {
 }
 
 body[data-page-id="login-login"] #kc-form {
-    grid-row:  2 / span 1;
-    grid-column: 1 / span 1;
-    padding: 3.75rem 3.75rem 0 3.75rem;
+    order: 1;
 }
 
 body[data-page-id="login-login"] #kc-info {
-    grid-row:  3 / span 1;
-    grid-column: 1 / span 1;
-    padding: 0 3.75rem 3.75rem 3.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    order: 2;
 }
 
 #kc-registration a {
@@ -207,17 +213,45 @@ body[data-page-id="login-login"] #kc-info {
 }
 
 body[data-page-id="login-login"] #kc-social-providers {
-    grid-row:  2 / span 2;
-    grid-column: 2 / span 1;
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
-    padding-left: 3.75rem;
-    padding-right: 3.75rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    order: 3;
 }
 
-body[data-page-id="login-login"] #kc-content-wrapper .alert {
+/** Grid layout on main login form for larger screens */
+@media (min-width: 850px) {
+  body[data-page-id="login-login"] #kc-content-wrapper {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+  }
+
+  body[data-page-id="login-login"] #kc-form {
+    grid-row:  2 / span 1;
+    grid-column: 1 / span 1;
+    padding: 3.75rem 3.75rem 0 3.75rem;
+  }
+
+  body[data-page-id="login-login"] #kc-info {
+    grid-row:  3 / span 1;
+    grid-column: 1 / span 1;
+    padding: 0 3.75rem 3.75rem 3.75rem;
+  }
+
+  body[data-page-id="login-login"] #kc-social-providers {
+    grid-row:  2 / span 2;
+    grid-column: 2 / span 1;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 0;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+  }
+
+  body[data-page-id="login-login"] #kc-content-wrapper .alert {
     grid-column: 1 / span 2;
+  }
 }
 
 #kc-social-providers hr {
@@ -296,7 +330,7 @@ header.banner .col-md-10 {
 ol#kc-totp-settings {
     counter-reset: otp-steps-counter;
     list-style: none;
-    padding-left: 3.5rem;
+    padding-left: 1.5rem;
     margin-bottom: 0;
 }
 
@@ -335,10 +369,20 @@ ul#kc-totp-supported-apps li {
 }
 
 #kc-totp-settings-form {
-    margin-left: 3.5rem;
+    margin-left: 1.5rem;
     padding-left: 2.5rem;
     max-width: 40rem;
     border-left: 1px solid #d5d8de;
+}
+
+@media (min-width: 850px) {
+  ol#kc-totp-settings {
+    padding-left: 3.5rem;
+  }
+
+  #kc-totp-settings-form {
+    margin-left: 3.5rem;
+  }
 }
 
 body[data-page-id="login-login-verify-email"] #kc-content-wrapper .alert {
