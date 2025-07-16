@@ -226,7 +226,11 @@
     --pf-v5-c-menu-toggle--before--BorderRightWidth: 0;
 }
 
-
+@media (max-width: 768px) {
+  div[data-testrole="created-at"].pf-v5-c-data-list__cell {
+    order: unset;
+    padding-block-end: 0.5rem;
+  }
 }
 
 @font-face {
